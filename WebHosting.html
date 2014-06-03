@@ -1,0 +1,569 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>WEB HOSTING</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<link href="http://mobile.tenten.vn/Content/css/smartphone/homestyle.css" rel="stylesheet" type="text/css" />
+<link href="http://mobile.tenten.vn/Content/css/smartphone/whois.css" rel="stylesheet" type="text/css" />
+<link href="http://mobile.tenten.vn/Content/css/smartphone/result_search.css" rel="stylesheet" type="text/css" />	
+<script type="text/javascript" src="http://mobile.tenten.vn/Scripts/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://mobile.tenten.vn/Scripts/smartphone/jquery.reveal.js"></script>
+<link href="http://mobile.tenten.vn/Content/css/alert.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://mobile.tenten.vn/Scripts/jquery.alerts.js"></script>
+<script>
+  var flg_menu=0;
+function checkLength(value) {
+	return value.length >= 3 && value.length <= 63 ? true : false;
+}
+  function chdomain(d){
+              if(d.length<1){
+                    return "Tên miền không được để trống";
+                }
+               var str=/^[0-9|a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ.-]+$/;
+                if(d.match(str)){
+                }else{
+                 return "Tên miền không hợp lệ hoặc chứa kí tự đặc biệt.";
+                }
+                if(!checkLength(d)){
+                    return "Tên miền phải có tối thiểu 3 kí tự và không được lớn hơn 63 kí tự";
+                }
+                return "";
+  }  
+</script>
+<script>
+$(document).ready(function(){
+  $( "#kiemtra" ).click(function() {
+   var domain=$('#domainNameSingleInput').val();
+   var mes=chdomain(domain);
+            if(mes!=""){
+             $('#modal').show();
+             $("#textwhois").html(mes);
+             $('#modal').reveal({ // The item which will be opened with reveal
+                                                animation: 'fade',                   // fade, fadeAndPop, none
+                                                animationspeed: 600,                       // how fast animtions are
+                                                closeonbackgroundclick: true,              // if you click background will modal close?
+                                                dismissmodalclass: 'close'    // the class of a button or element that will close an open modal
+                                        });
+          }else{
+    $( "#submit-form1" ).submit();
+     }
+   });
+  $( "#closewhois" ).click(function() {
+     $("#textwhois").html('');
+     $('#modal').hide();
+   });
+   $( ".menumorong" ).click(function() {
+   if(flg_menu==0){
+   $("#menumorong").html('<img style="margin-left: -1px;margin-top: -11px;" src="http://mobile.tenten.vn/Content/image/smartphone/menumorong_hover.png">');
+   $( "#bd_sm" ).animate({
+             'margin-left':'250px',opacity:'1'
+         },"slow");
+         
+     $( "#menumr" ).animate({
+             left:'0px',opacity:'1'
+         },"slow");
+    
+       flg_menu=1;
+
+   }else{
+   
+   
+    $( "#bd_sm" ).animate({
+            'margin-left':'0',opacity:'1'
+         },"slow");
+         
+     $( "#menumr" ).animate({
+             left:'-250px',opacity:'1'
+         },"slow");
+          $("#menumorong").html('<img src="http://mobile.tenten.vn/Content/image/smartphone/menumorong.png">');
+      flg_menu=0;
+
+   }    
+  });
+  });
+</script>
+</head>
+ <body>
+
+ <script type="text/javascript">  
+  var _gaq = _gaq || [];   var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';  
+ _gaq.push(['_require', 'inpage_linkid', pluginUrl]);   _gaq.push(['_setAccount','UA-45617972-1']);  
+ _gaq.push(['_setDomainName', 'tenten.vn']);   _gaq.push(['_setAllowLinker', true]);
+   _gaq.push(['_trackPageview']);    
+(function() {   
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;   
+  ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';  
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);   })(); 
+ </script>
+ <script language="javascript">
+	 $(window).load(function () {
+            // run code
+			
+			
+			setTimeout(function(){ 
+				$(".loading-page").fadeOut();
+				
+			},700);
+            //$(".loading-page").attr("style","z-index:-9999");
+        });
+
+</script>
+<!--Begin Page-->
+<div class="bd" id="bd_sm" style="position: relative;width: 100%;">
+        <!--Begin Centent--> 
+        <div class="bgcontent">
+        	<!--Begin Search-->
+                <!--<link href="http://mobile.tenten.vn/Content/css/q_domain.css" rel="stylesheet" type="text/css" />
+--><script src="http://mobile.tenten.vn/Scripts/displayHostingPlan.js" type="text/javascript"></script>
+<script type="text/javascript">
+var vpath="http://mobile.tenten.vn/";
+		 $(function () {
+	    	    var tabContainers = $('div.ho_tab > div');
+	    	    $('div.tab-menu-home-hosting ul.navigation a').click(function (){
+	    	        tabContainers.hide().filter(this.hash).show();
+	    	        $('div.tab-menu-home-hosting ul.navigation a').removeClass('selected');
+					if ( $(this).attr('id') == 'alinux')
+					{
+						$("#imglinux").attr('src','http://mobile.tenten.vn/Content/images/tab1-home-hosting.png');
+						$("#imgwindows").attr('src','http://mobile.tenten.vn/Content/images/tab2-home-hosting.png');
+						$("#divlinux").removeClass('linux-active1');
+						$("#divwindows").removeClass('linux-active2');
+					}
+					else if ( $(this).attr('id') == 'awindows')
+					{
+						$("#imglinux").attr('src','http://mobile.tenten.vn/Content/images/tab12-home-hosting.png');
+						$("#imgwindows").attr('src','http://mobile.tenten.vn/Content/images/tab21-home-hosting.png');
+						$("#divlinux").addClass('linux-active1');
+						$("#divwindows").addClass('linux-active2');
+					}
+					
+	    	        
+	    	        return false;
+	    	    }).filter(':first').click();
+	    	});
+	   
+		</script>
+<!-- Begin main windows hosting-->
+<div class="result_domain">
+<h2>hosting</h2>
+                <div class="hosting">
+                	<div class="tab">
+                        <div id="divtablinux" class="tab1 top"><a href="javascript:changetab('linux');"><img id="ilinux" src="http://mobile.tenten.vn/Content/image/smartphone/linuxhosting.png" /></a></div>
+                        <div id="divtabwindow" class="tab1 ml"><a href="javascript:changetab('window');"><img id="iwindow" src="http://mobile.tenten.vn/Content/image/smartphone/windowhosting1.png" /></a></div>
+                    </div>
+                    <div id="tab-linux">
+                    <form id="lilux-product-form" action="http://mobile.tenten.vn/Registration/displayHostingPlan/Linux" method="post">
+            <input class="Lilux-key" type="hidden" name="productkey" value="" />
+        </form>
+                    <div class="hosting_bd">
+                    	<ul>
+                    	                    	                        	<li id="liA3" class="active"><a id="aA3" href="javascript:changeproduct('A',3);" class="active">Gói A</a></li>
+                        	<!--                             <li><a href=""></a></li> -->
+<!--                             <li><a href="">Gói C</a></li> -->
+<!--                             <li><a href="">Gói D</a></li> -->
+<!--                             <li><a href="">Gói E</a></li> -->
+<!--                             <li><a href="">Gói F</a></li> -->
+                                                	                        	 <li id="liB3" class="no"><a id="aB3" href="javascript:changeproduct('B','3');" class="no">Gói B</a></li>
+                        	<!--                             <li><a href=""></a></li> -->
+<!--                             <li><a href="">Gói C</a></li> -->
+<!--                             <li><a href="">Gói D</a></li> -->
+<!--                             <li><a href="">Gói E</a></li> -->
+<!--                             <li><a href="">Gói F</a></li> -->
+                                                	                        	 <li id="liC3" class="no"><a id="aC3" href="javascript:changeproduct('C','3');" class="no">Gói C</a></li>
+                        	<!--                             <li><a href=""></a></li> -->
+<!--                             <li><a href="">Gói C</a></li> -->
+<!--                             <li><a href="">Gói D</a></li> -->
+<!--                             <li><a href="">Gói E</a></li> -->
+<!--                             <li><a href="">Gói F</a></li> -->
+                                                	                        	 <li id="liD3" class="no"><a id="aD3" href="javascript:changeproduct('D','3');" class="no">Gói D</a></li>
+                        	<!--                             <li><a href=""></a></li> -->
+<!--                             <li><a href="">Gói C</a></li> -->
+<!--                             <li><a href="">Gói D</a></li> -->
+<!--                             <li><a href="">Gói E</a></li> -->
+<!--                             <li><a href="">Gói F</a></li> -->
+                                                	                        	 <li id="liE3" class="no"><a id="aE3" href="javascript:changeproduct('E','3');" class="no">Gói E</a></li>
+                        	<!--                             <li><a href=""></a></li> -->
+<!--                             <li><a href="">Gói C</a></li> -->
+<!--                             <li><a href="">Gói D</a></li> -->
+<!--                             <li><a href="">Gói E</a></li> -->
+<!--                             <li><a href="">Gói F</a></li> -->
+                                                	                        	 <li id="liF3" class="no"><a id="aF3" href="javascript:changeproduct('F','3');" class="no">Gói F</a></li>
+                        	<!--                             <li><a href=""></a></li> -->
+<!--                             <li><a href="">Gói C</a></li> -->
+<!--                             <li><a href="">Gói D</a></li> -->
+<!--                             <li><a href="">Gói E</a></li> -->
+<!--                             <li><a href="">Gói F</a></li> -->
+                                                	                        	 <li id="liG3" class="no"><a id="aG3" href="javascript:changeproduct('G','3');" class="no">Gói G</a></li>
+                        	<!--                             <li><a href=""></a></li> -->
+<!--                             <li><a href="">Gói C</a></li> -->
+<!--                             <li><a href="">Gói D</a></li> -->
+<!--                             <li><a href="">Gói E</a></li> -->
+<!--                             <li><a href="">Gói F</a></li> -->
+                                                    </ul>
+                        
+                        <div id="packetAlinux" class="detail">
+                        	<p><strong><span>30.000</span> VNĐ/tháng</strong></p>
+                            <p><span class="col1">Dung lượng: </span>300MB</p>
+                            <p><span class="col1">Server đặt tại: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/flag_vn.png" /></p>
+                            <p><span class="col1">Băng thông: </span>5GB</p>
+                            <p><span class="col1">Subdomain: </span>1</p>
+                            <p><span class="col1">Addon Domain: </span>0</p>
+                            <p><span class="col1">Park Domain: </span>3</p>
+                            <p><span class="col1">MySQL: </span>1</p>
+                            <p><span class="col1">PHP (v5.x): </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Email: </span>10 địa chỉ</p>
+                            <p><span class="col1">FTP: </span>1 tài khoản</p>
+                            <p><span class="col1">Back up: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Hợp đồng: </span>12 tháng</p>
+                            <a href="javascript: submitHostingPlan('lilux-product-form', 'Lilux', 'A');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                        </div>
+                        <div id="packetBlinux" style="display: none" class="detail">
+                        	<p><strong><span>55.000</span> VNĐ/tháng</strong></p>
+                            <p><span class="col1">Dung lượng: </span>600MB</p>
+                            <p><span class="col1">Server đặt tại: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/flag_vn.png" /></p>
+                            <p><span class="col1">Băng thông: </span>15GB</p>
+                            <p><span class="col1">Subdomain: </span>2</p>
+                            <p><span class="col1">Addon Domain: </span>0</p>
+                            <p><span class="col1">Park Domain: </span>5</p>
+                            <p><span class="col1">MySQL: </span>2</p>
+                            <p><span class="col1">PHP (v5.x): </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Email: </span>20 địa chỉ</p>
+                            <p><span class="col1">FTP: </span>2 tài khoản</p>
+                            <p><span class="col1">Back up: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Hợp đồng: </span>6 tháng</p>
+                            <a href="javascript: submitHostingPlan('lilux-product-form', 'Lilux', 'B');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                        </div>
+                        <div id="packetClinux" style="display: none" class="detail">
+                        	<p><strong><span>75.000</span> VNĐ/tháng</strong></p>
+                            <p><span class="col1">Dung lượng: </span>850MB</p>
+                            <p><span class="col1">Server đặt tại: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/flag_vn.png" /></p>
+                            <p><span class="col1">Băng thông: </span> 20GB</p>
+                            <p><span class="col1">Subdomain: </span>5</p>
+                            <p><span class="col1">Addon Domain: </span>1</p>
+                            <p><span class="col1">Park Domain: </span>15</p>
+                            <p><span class="col1">MySQL: </span>3</p>
+                            <p><span class="col1">PHP (v5.x): </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Email: </span>60 địa chỉ</p>
+                            <p><span class="col1">FTP: </span>3 tài khoản</p>
+                            <p><span class="col1">Back up: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Hợp đồng: </span>6 tháng</p>
+                            <a href="javascript: submitHostingPlan('lilux-product-form', 'Lilux', 'C');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                        </div>
+                        <div id="packetDlinux" style="display: none" class="detail">
+                        	<p><strong><span>110.000</span> VNĐ/tháng</strong></p>
+                            <p><span class="col1">Dung lượng: </span>1,200MB</p>
+                            <p><span class="col1">Server đặt tại: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/flag_vn.png" /></p>
+                            <p><span class="col1">Băng thông: </span> 30GB</p>
+                            <p><span class="col1">Subdomain: </span>10</p>
+                            <p><span class="col1">Addon Domain: </span>3</p>
+                            <p><span class="col1">Park Domain: </span>20</p>
+                            <p><span class="col1">MySQL: </span>5</p>
+                            <p><span class="col1">PHP (v5.x): </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Email: </span>80 địa chỉ</p>
+                            <p><span class="col1">FTP: </span>5 tài khoản</p>
+                            <p><span class="col1">Back up: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Hợp đồng: </span>6 tháng</p>
+                            <a href="javascript: submitHostingPlan('lilux-product-form', 'Lilux', 'D');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                        </div>
+                        <div id="packetElinux" style="display: none" class="detail">
+                        	<p><strong><span>125.000</span> VNĐ/tháng</strong></p>
+                            <p><span class="col1">Dung lượng: </span>1,600MB</p>
+                            <p><span class="col1">Server đặt tại: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/flag_vn.png" /></p>
+                            <p><span class="col1">Băng thông: </span> 50GB</p>
+                            <p><span class="col1">Subdomain: </span>20</p>
+                            <p><span class="col1">Addon Domain: </span>4</p>
+                            <p><span class="col1">Park Domain: </span>25</p>
+                            <p><span class="col1">MySQL: </span>10</p>
+                            <p><span class="col1">PHP (v5.x): </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Email: </span>150 địa chỉ</p>
+                            <p><span class="col1">FTP: </span>5 tài khoản</p>
+                            <p><span class="col1">Back up: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Hợp đồng: </span>3 tháng</p>
+                            <a href="javascript: submitHostingPlan('lilux-product-form', 'Lilux', 'E');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                        </div>
+                        <div id="packetFlinux" style="display: none" class="detail">
+                        	<p><strong><span>220.000</span> VNĐ/tháng</strong></p>
+                            <p><span class="col1">Dung lượng: </span>3,200MB </p>
+                            <p><span class="col1">Server đặt tại: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/flag_vn.png" /></p>
+                            <p><span class="col1">Băng thông: </span> 80GB</p>
+                            <p><span class="col1">Subdomain: </span>50</p>
+                            <p><span class="col1">Addon Domain: </span>7</p>
+                            <p><span class="col1">Park Domain: </span>40</p>
+                            <p><span class="col1">MySQL: </span>20</p>
+                            <p><span class="col1">PHP (v5.x): </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Email: </span>500 địa chỉ</p>
+                            <p><span class="col1">FTP: </span>10 tài khoản</p>
+                            <p><span class="col1">Back up: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Hợp đồng: </span>3 tháng</p>
+                            <a href="javascript: submitHostingPlan('lilux-product-form', 'Lilux', 'F');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                        </div>
+                        <div id="packetGlinux" style="display: none" class="detail">
+                        	<p><strong><span>350.000</span> VNĐ/tháng</strong></p>
+                            <p><span class="col1">Dung lượng: </span>12,000MB </p>
+                            <p><span class="col1">Server đặt tại: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/flag_vn.png" /></p>
+                            <p><span class="col1">Băng thông: </span>150GB</p>
+                            <p><span class="col1">Subdomain: </span>Không giới hạn</p>
+                            <p><span class="col1">Addon Domain: </span>15</p>
+                            <p><span class="col1">Park Domain: </span>100</p>
+                            <p><span class="col1">MySQL: </span>100</p>
+                            <p><span class="col1">PHP (v5.x): </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Email: </span>Không giới hạn</p>
+                            <p><span class="col1">FTP: </span>10 tài khoản</p>
+                            <p><span class="col1">Back up: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Hợp đồng: </span>3 tháng</p>
+                            <a href="javascript: submitHostingPlan('lilux-product-form', 'Lilux', 'G');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                        </div>
+                    </div>
+                    <div class="service_add">
+                    	<h3>Các dịch vụ cộng thêm</h3>
+                        <p><strong>Dung lượng:</strong> Mỗi 100MB lưu trữ tiếp theo <span>30.000</span> VNĐ/tháng </p>
+                        <p><strong>Băng thông:</strong> Mỗi 1GB băng thông tiếp theo <span>15.000</span> VNĐ/tháng</p>
+                    </div>
+                    <div class="service_add">
+                    	<h3>Các tính năng hỗ trợ</h3>
+                        <ul>
+                        	<li>PHP (v5.x)</li>
+                            <li>MySQL</li>
+                            <li>PhpMyAdmin </li>
+                            <li>Redirects/ Password Protect Directories</li>
+                            <li>Joomla</li>
+                            <li>File manager</li>
+                            <li>FTP/POP/SMTP Over SSL </li>
+                        </ul>
+                         <ul class="fr">
+                        	<li>Web mail</li>
+                            <li>Spam Filter with SpamAssassin </li>
+                            <li>24/7/365 Email + Helpdesk support </li>
+                            <li>99.9% Server uptime</li>
+                            <li>Weekly Backup </li>
+                            <li>Schedule Task</li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div id="tab-window" style="display: none">
+                    	 <form id="window-product-form" action="http://mobile.tenten.vn/Registration/displayHostingPlan/Window" method="post">
+				<input class="Window-key" type="hidden" name="productkey" value="" />
+			</form>
+                    <div class="hosting_bd">
+                    	<ul>
+                    	                    	                        	<li id="liA2" class="active"><a id="aA2" href="javascript:changeproduct('A',2);" class="active">Gói A</a></li>
+                        	<!--                             <li><a href=""></a></li> -->
+<!--                             <li><a href="">Gói C</a></li> -->
+<!--                             <li><a href="">Gói D</a></li> -->
+<!--                             <li><a href="">Gói E</a></li> -->
+<!--                             <li><a href="">Gói F</a></li> -->
+                                                	                        	 <li id="liB2" class="no"><a id="aB2" href="javascript:changeproduct('B','2');" class="no">Gói B</a></li>
+                        	<!--                             <li><a href=""></a></li> -->
+<!--                             <li><a href="">Gói C</a></li> -->
+<!--                             <li><a href="">Gói D</a></li> -->
+<!--                             <li><a href="">Gói E</a></li> -->
+<!--                             <li><a href="">Gói F</a></li> -->
+                                                	                        	 <li id="liC2" class="no"><a id="aC2" href="javascript:changeproduct('C','2');" class="no">Gói C</a></li>
+                        	<!--                             <li><a href=""></a></li> -->
+<!--                             <li><a href="">Gói C</a></li> -->
+<!--                             <li><a href="">Gói D</a></li> -->
+<!--                             <li><a href="">Gói E</a></li> -->
+<!--                             <li><a href="">Gói F</a></li> -->
+                                                	                        	 <li id="liD2" class="no"><a id="aD2" href="javascript:changeproduct('D','2');" class="no">Gói D</a></li>
+                        	<!--                             <li><a href=""></a></li> -->
+<!--                             <li><a href="">Gói C</a></li> -->
+<!--                             <li><a href="">Gói D</a></li> -->
+<!--                             <li><a href="">Gói E</a></li> -->
+<!--                             <li><a href="">Gói F</a></li> -->
+                                                	                        	 <li id="liE2" class="no"><a id="aE2" href="javascript:changeproduct('E','2');" class="no">Gói E</a></li>
+                        	<!--                             <li><a href=""></a></li> -->
+<!--                             <li><a href="">Gói C</a></li> -->
+<!--                             <li><a href="">Gói D</a></li> -->
+<!--                             <li><a href="">Gói E</a></li> -->
+<!--                             <li><a href="">Gói F</a></li> -->
+                                                	                        	 <li id="liF2" class="no"><a id="aF2" href="javascript:changeproduct('F','2');" class="no">Gói F</a></li>
+                        	<!--                             <li><a href=""></a></li> -->
+<!--                             <li><a href="">Gói C</a></li> -->
+<!--                             <li><a href="">Gói D</a></li> -->
+<!--                             <li><a href="">Gói E</a></li> -->
+<!--                             <li><a href="">Gói F</a></li> -->
+                                                	                        	 <li id="liG2" class="no"><a id="aG2" href="javascript:changeproduct('G','2');" class="no">Gói G</a></li>
+                        	<!--                             <li><a href=""></a></li> -->
+<!--                             <li><a href="">Gói C</a></li> -->
+<!--                             <li><a href="">Gói D</a></li> -->
+<!--                             <li><a href="">Gói E</a></li> -->
+<!--                             <li><a href="">Gói F</a></li> -->
+                                                    </ul>
+                        
+                        <div id="packetAwindow" class="detail">
+                        	<p><strong><span>30.000</span> VNĐ/tháng</strong></p>
+                            <p><span class="col1">Dung lượng: </span>300MB</p>
+                            <p><span class="col1">Server đặt tại: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/flag_vn.png" /></p>
+                            <p><span class="col1">Băng thông: </span>5GB</p>
+                            <p><span class="col1">Subdomain: </span>1</p>
+                            <p><span class="col1">Addon Domain: </span>0</p>
+                            <p><span class="col1">Park Domain: </span>3</p>
+                            <p><span class="col1">PHP/ASP.NET : </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">MySQL: </span>1</p>
+                            <p><span class="col1">MSSQL: </span>1</p>
+                            <p><span class="col1">IIS version: </span>ISS 7</p>
+                            <p><span class="col1">Email: </span>10 địa chỉ</p>
+                            <p><span class="col1">FTP: </span>1 tài khoản</p>
+                            <p><span class="col1">Back up: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Hợp đồng: </span>12 tháng</p>
+                            <a href="javascript: submitHostingPlan('window-product-form', 'Window', 'A');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                        </div>
+                        <div id="packetBwindow" class="detail">
+                        	<p><strong><span>55.000</span> VNĐ/tháng</strong></p>
+                            <p><span class="col1">Dung lượng: </span>600MB</p>
+                            <p><span class="col1">Server đặt tại: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/flag_vn.png" /></p>
+                            <p><span class="col1">Băng thông: </span>15GB</p>
+                            <p><span class="col1">Subdomain: </span>2</p>
+                            <p><span class="col1">Addon Domain: </span>0</p>
+                            <p><span class="col1">Park Domain: </span>5</p>
+                            <p><span class="col1">PHP/ASP.NET : </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">MySQL: </span>2</p>
+                            <p><span class="col1">MSSQL: </span>2</p>
+                            <p><span class="col1">IIS version: </span>ISS 7</p>
+                            <p><span class="col1">Email: </span>20 địa chỉ</p>
+                            <p><span class="col1">FTP: </span>2 tài khoản</p>
+                            <p><span class="col1">Back up: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Hợp đồng: </span>6 tháng</p>
+                            <a href="javascript: submitHostingPlan('window-product-form', 'Window', 'B');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                        </div>
+                        <div id="packetCwindow" class="detail">
+                        	<p><strong><span>75.000</span> VNĐ/tháng</strong></p>
+                            <p><span class="col1">Dung lượng: </span>850MB</p>
+                            <p><span class="col1">Server đặt tại: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/flag_vn.png" /></p>
+                            <p><span class="col1">Băng thông: </span>20GB</p>
+                            <p><span class="col1">Subdomain: </span>5</p>
+                            <p><span class="col1">Addon Domain: </span>1</p>
+                            <p><span class="col1">Park Domain: </span>15</p>
+                            <p><span class="col1">PHP/ASP.NET : </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">MySQL: </span>3</p>
+                            <p><span class="col1">MSSQL: </span>3</p>
+                            <p><span class="col1">IIS version: </span>ISS 7</p>
+                            <p><span class="col1">Email: </span>60 địa chỉ</p>
+                            <p><span class="col1">FTP: </span>3 tài khoản</p>
+                            <p><span class="col1">Back up: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Hợp đồng: </span>6 tháng</p>
+                            <a href="javascript: submitHostingPlan('window-product-form', 'Window', 'C');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                        </div>
+                        <div id="packetDwindow" class="detail">
+                        	<p><strong><span>110.000</span> VNĐ/tháng</strong></p>
+                            <p><span class="col1">Dung lượng: </span>1,200MB </p>
+                            <p><span class="col1">Server đặt tại: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/flag_vn.png" /></p>
+                            <p><span class="col1">Băng thông: </span>30GB</p>
+                            <p><span class="col1">Subdomain: </span>10</p>
+                            <p><span class="col1">Addon Domain: </span>3</p>
+                            <p><span class="col1">Park Domain: </span>20</p>
+                            <p><span class="col1">PHP/ASP.NET : </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">MySQL: </span>5</p>
+                            <p><span class="col1">MSSQL: </span>5</p>
+                            <p><span class="col1">IIS version: </span>ISS 7</p>
+                            <p><span class="col1">Email: </span>80 địa chỉ</p>
+                            <p><span class="col1">FTP: </span>5 tài khoản</p>
+                            <p><span class="col1">Back up: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Hợp đồng: </span>6 tháng</p>
+                            <a href="javascript: submitHostingPlan('window-product-form', 'Window', 'D');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                        </div>
+                        <div id="packetEwindow" class="detail">
+                        	<p><strong><span>125.000</span> VNĐ/tháng</strong></p>
+                            <p><span class="col1">Dung lượng: </span>1,600MB</p>
+                            <p><span class="col1">Server đặt tại: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/flag_vn.png" /></p>
+                            <p><span class="col1">Băng thông: </span>50GB</p>
+                            <p><span class="col1">Subdomain: </span>20</p>
+                            <p><span class="col1">Addon Domain: </span>4</p>
+                            <p><span class="col1">Park Domain: </span>25</p>
+                            <p><span class="col1">PHP/ASP.NET : </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">MySQL: </span>10</p>
+                            <p><span class="col1">MSSQL: </span>10</p>
+                            <p><span class="col1">IIS version: </span>ISS 7</p>
+                            <p><span class="col1">Email: </span>150 địa chỉ</p>
+                            <p><span class="col1">FTP: </span>5 tài khoản</p>
+                            <p><span class="col1">Back up: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Hợp đồng: </span>3 tháng</p>
+                            <a href="javascript: submitHostingPlan('window-product-form', 'Window', 'E');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                        </div>
+                        <div id="packetFwindow" class="detail">
+                        	<p><strong><span>220.000</span> VNĐ/tháng</strong></p>
+                            <p><span class="col1">Dung lượng: </span>3,200MB</p>
+                            <p><span class="col1">Server đặt tại: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/flag_vn.png" /></p>
+                            <p><span class="col1">Băng thông: </span>80GB</p>
+                            <p><span class="col1">Subdomain: </span>50</p>
+                            <p><span class="col1">Addon Domain: </span>7</p>
+                            <p><span class="col1">Park Domain: </span>40</p>
+                            <p><span class="col1">PHP/ASP.NET : </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">MySQL: </span>20</p>
+                            <p><span class="col1">MSSQL: </span>20</p>
+                            <p><span class="col1">IIS version: </span>ISS 7</p>
+                            <p><span class="col1">Email: </span>500 địa chỉ</p>
+                            <p><span class="col1">FTP: </span>10 tài khoản</p>
+                            <p><span class="col1">Back up: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Hợp đồng: </span>3 tháng</p>
+                            <a href="javascript: submitHostingPlan('window-product-form', 'Window', 'F');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                        </div>
+                        <div id="packetGwindow" class="detail">
+                        	<p><strong><span>350.000</span> VNĐ/tháng</strong></p>
+                            <p><span class="col1">Dung lượng: </span>12,000MB</p>
+                            <p><span class="col1">Server đặt tại: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/flag_vn.png" /></p>
+                            <p><span class="col1">Băng thông: </span>150GB</p>
+                            <p><span class="col1">Subdomain: </span>Không giới hạn</p>
+                            <p><span class="col1">Addon Domain: </span>15</p>
+                            <p><span class="col1">Park Domain: </span>100</p>
+                            <p><span class="col1">PHP/ASP.NET : </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">MySQL: </span>30</p>
+                            <p><span class="col1">MSSQL: </span>30</p>
+                            <p><span class="col1">IIS version: </span>ISS 7</p>
+                            <p><span class="col1">Email: </span>Không giới hạn</p>
+                            <p><span class="col1">FTP: </span>10 tài khoản</p>
+                            <p><span class="col1">Back up: </span><img src="http://mobile.tenten.vn/Content/image/smartphone/tick2.png" /></p>
+                            <p><span class="col1">Hợp đồng: </span>3 tháng</p>
+                            <a href="javascript: submitHostingPlan('window-product-form', 'Window', 'G');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                        </div>
+                    </div>
+                    <div class="service_add">
+                    	<h3>Các dịch vụ cộng thêm</h3>
+                        <p><strong>Dung lượng:</strong> Mỗi 100MB lưu trữ tiếp theo <span>30.000</span> VNĐ/tháng </p>
+                        <p><strong>Băng thông:</strong> Mỗi 1GB băng thông tiếp theo <span>15.000</span> VNĐ/tháng</p>
+                    </div>
+                    <div class="service_add">
+                    	<h3>Các tính năng hỗ trợ</h3>
+                        <ul>
+                        	<li>PHP (v5.x)</li>
+                            <li>MySQL</li>
+                            <li>PhpMyAdmin </li>
+                            <li>Redirects/ Password Protect Directories</li>
+                            <li>Joomla</li>
+                            <li>File manager</li>
+                            <li>FTP/POP/SMTP Over SSL </li>
+                        </ul>
+                         <ul class="fr">
+                        	<li>Web mail</li>
+                            <li>Spam Filter with SpamAssassin </li>
+                            <li>24/7/365 Email + Helpdesk support </li>
+                            <li>99.9% Server uptime</li>
+                            <li>Weekly Backup </li>
+                            <li>Schedule Task</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+	</div>
+            <!--End Hotline-->  
+        </div>         	
+        <!--End Centent--> 
+    </div>
+ 
+<!--End Page-->
+ <div  id="modal" style="display: none">
+<span class="button b-close close" id="closewhois">
+<span>X</span>
+</span>
+    <div class="who_is">
+	<h2>Thông tin <span>Thông báo</span></h2>
+        <div class="text" id="textwhois">
+        	
+        </div>
+</div>
+</div> 
+
+</body>
+</html>
+

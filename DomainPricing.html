@@ -1,0 +1,827 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>BẢNG GIÁ TÊN MIỀN</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<link href="http://mobile.tenten.vn/Content/css/smartphone/homestyle.css" rel="stylesheet" type="text/css" />
+<link href="http://mobile.tenten.vn/Content/css/smartphone/whois.css" rel="stylesheet" type="text/css" />
+<link href="http://mobile.tenten.vn/Content/css/smartphone/result_search.css" rel="stylesheet" type="text/css" />	
+<script type="text/javascript" src="http://mobile.tenten.vn/Scripts/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://mobile.tenten.vn/Scripts/smartphone/jquery.reveal.js"></script>
+<link href="http://mobile.tenten.vn/Content/css/alert.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://mobile.tenten.vn/Scripts/jquery.alerts.js"></script>
+<script>
+  var flg_menu=0;
+function checkLength(value) {
+	return value.length >= 3 && value.length <= 63 ? true : false;
+}
+  function chdomain(d){
+              if(d.length<1){
+                    return "Tên miền không được để trống";
+                }
+               var str=/^[0-9|a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ.-]+$/;
+                if(d.match(str)){
+                }else{
+                 return "Tên miền không hợp lệ hoặc chứa kí tự đặc biệt.";
+                }
+                if(!checkLength(d)){
+                    return "Tên miền phải có tối thiểu 3 kí tự và không được lớn hơn 63 kí tự";
+                }
+                return "";
+  }  
+</script>
+<script>
+$(document).ready(function(){
+  $( "#kiemtra" ).click(function() {
+   var domain=$('#domainNameSingleInput').val();
+   var mes=chdomain(domain);
+            if(mes!=""){
+             $('#modal').show();
+             $("#textwhois").html(mes);
+             $('#modal').reveal({ // The item which will be opened with reveal
+                                                animation: 'fade',                   // fade, fadeAndPop, none
+                                                animationspeed: 600,                       // how fast animtions are
+                                                closeonbackgroundclick: true,              // if you click background will modal close?
+                                                dismissmodalclass: 'close'    // the class of a button or element that will close an open modal
+                                        });
+          }else{
+    $( "#submit-form1" ).submit();
+     }
+   });
+  $( "#closewhois" ).click(function() {
+     $("#textwhois").html('');
+     $('#modal').hide();
+   });
+   $( ".menumorong" ).click(function() {
+   if(flg_menu==0){
+   $("#menumorong").html('<img style="margin-left: -1px;margin-top: -11px;" src="http://mobile.tenten.vn/Content/image/smartphone/menumorong_hover.png">');
+   $( "#bd_sm" ).animate({
+             'margin-left':'250px',opacity:'1'
+         },"slow");
+         
+     $( "#menumr" ).animate({
+             left:'0px',opacity:'1'
+         },"slow");
+    
+       flg_menu=1;
+
+   }else{
+   
+   
+    $( "#bd_sm" ).animate({
+            'margin-left':'0',opacity:'1'
+         },"slow");
+         
+     $( "#menumr" ).animate({
+             left:'-250px',opacity:'1'
+         },"slow");
+          $("#menumorong").html('<img src="http://mobile.tenten.vn/Content/image/smartphone/menumorong.png">');
+      flg_menu=0;
+
+   }    
+  });
+  });
+</script>
+</head>
+ <body>
+
+ <script type="text/javascript">  
+  var _gaq = _gaq || [];   var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';  
+ _gaq.push(['_require', 'inpage_linkid', pluginUrl]);   _gaq.push(['_setAccount','UA-45617972-1']);  
+ _gaq.push(['_setDomainName', 'tenten.vn']);   _gaq.push(['_setAllowLinker', true]);
+   _gaq.push(['_trackPageview']);    
+(function() {   
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;   
+  ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';  
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);   })(); 
+ </script>
+ <script language="javascript">
+	 $(window).load(function () {
+            // run code
+			
+			
+			setTimeout(function(){ 
+				$(".loading-page").fadeOut();
+				
+			},700);
+            //$(".loading-page").attr("style","z-index:-9999");
+        });
+
+</script>
+<!--Begin Page-->
+<div class="bd" id="bd_sm" style="position: relative;width: 100%;">
+        <!--Begin Centent--> 
+        <div class="bgcontent">
+        	<!--Begin Search-->
+                <script>
+    var sh=0;
+    var showww=9999;
+    $(document).ready(function(){
+      $( "div.tab1" ).click(function(){
+            var show=$(this).attr("s");
+            
+            $(this).css("z-index",showww+10);
+            $(this).css("position",'relative');
+            showww=showww+10;
+            
+            $("#bg"+show).show();
+            if(show==2){
+              $("#bg1").hide();
+              $("#bg3").hide();
+               $("#t1").html('<img src="http://mobile.tenten.vn/Content/image/smartphone/tab_phobien1.png" />');
+              $("#t3").html('<img src="http://mobile.tenten.vn/Content/image/smartphone/tab_vn1.png" />');
+              $("#t2").html('<img src="http://mobile.tenten.vn/Content/image/smartphone/tab_qte.png" />');
+            
+            }
+            if(show==1){
+              $("#bg2").hide();
+              $("#bg3").hide();
+               $("#t1").html('<img src="http://mobile.tenten.vn/Content/image/smartphone/tab_phobien.png" />');
+              $("#t3").html('<img src="http://mobile.tenten.vn/Content/image/smartphone/tab_vn1.png" />');
+              $("#t2").html('<img src="http://mobile.tenten.vn/Content/image/smartphone/tab_qte1.png" />');   
+            }
+            if(show==3){
+               $("#t1").html('<img src="http://mobile.tenten.vn/Content/image/smartphone/tab_phobien1.png" />');
+              $("#t3").html('<img src="http://mobile.tenten.vn/Content/image/smartphone/tab_vn.png" />');
+              $("#t2").html('<img src="http://mobile.tenten.vn/Content/image/smartphone/tab_qte1.png" />');
+           
+              $("#bg1").hide();
+              $("#bg2").hide();
+            }       
+       });
+    });
+</script>
+<div class="result_domain">
+            	<h2><span>Bảng giá</span> tên miền</h2>
+                <div class="hosting bgtmien">
+                        <div class="tab">
+                        <div class="tab1 top" id="t1" s="1"><img src="http://mobile.tenten.vn/Content/image/smartphone/tab_phobien.png" /></div>
+                        <div class="tab1 center ml" id="t3" s="3"><img src="http://mobile.tenten.vn/Content/image/smartphone/tab_vn1.png" /></div>
+                        <div class="tab1 ml" id="t2" s="2"><img src="http://mobile.tenten.vn/Content/image/smartphone/tab_qte1.png" /></div>
+                        </div>
+                    <div class="bgtmien_bd" id="bg1" style="display:block">
+                   					
+                    	<div class="bgtmien_box">
+                            <p><strong>.com</strong></p>	
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>245.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.org</strong></p>	
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>245.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     					
+                    	<div class="bgtmien_box">
+                            <p><strong>.vn</strong></p>	
+                            <div>
+                                <p><span>Giá khởi tạo: </span>350.000 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>480.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.com.vn .net.vn .biz.vn</strong></p>	
+                            <div>
+                                <p><span>Giá khởi tạo: </span>350.000 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>350.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             		                     		                     		                     					
+                    	<div class="bgtmien_box">
+                            <p><strong>.net</strong></p>	
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>245.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                                         </div>
+                    <div class="bgtmien_bd" id="bg2" style="display:none">
+                   					
+                    	<div class="bgtmien_box">
+                            <p><strong>.com</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>245.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.org</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>245.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.co.uk</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>235.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.jp</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>1.350.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.name</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>410.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.asia</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>355.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.me</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>600.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.bz</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>600.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.ws</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>455.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.cc</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>655.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.co</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>605.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.tw</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>920.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.tv</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>605.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.eu</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>245.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.vc</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>1.115.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.sc</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>2.530.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.be</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>490.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.mn</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>1.400.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.hn</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>2.190.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.so</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>630.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.xxx</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>2.300.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             		                     		                     		                     		                     					
+                    	<div class="bgtmien_box">
+                            <p><strong>.in</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>335.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.net</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>245.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.biz</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>245.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.info</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>245.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.us</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>200.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.me.uk</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>235.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.org.uk</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>235.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.mobi</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>445.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.com.tw</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>920.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.org.tw</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>920.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.la</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>1.115.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     					
+                    	<div class="bgtmien_box">
+                            <p><strong>.com.co</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>595.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.nom.co</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>595.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.net.co</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>595.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.com.idn</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>235.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.net.idn</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>235.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.bike</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>785.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.clothing</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>785.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.guru</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>785.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.holdings</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>1.175.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.plumbing</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>785.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.singles</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>785.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.ventures</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>1.175.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.camera</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>785.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.equipment</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>590.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.estate</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>785.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.gallery</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>590.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.graphics</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>590.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.lighting</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>590.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.photography</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>470.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.contractors</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>785.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.land</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>785.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.technology</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>470.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.construction</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>785.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.directory</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>590.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.kitchen</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>785.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.today</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>590.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.diamonds</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>1.175.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.enterprises</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>785.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.tips</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>590.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                             					
+                    	<div class="bgtmien_box">
+                            <p><strong>.voyage</strong></p>
+                            <div>
+                                <p><span>Giá khởi tạo: </span>0 VNĐ/năm</p>
+                                <p><span>Giá duy trì: </span>1.175.000 VNĐ/năm</p>
+                            </div>
+                            <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                        </div>
+                                                                 </div>
+                    <div class="bgtmien_bd" id="bg3" style="display:none">
+                   		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                                                         <div class="bgtmien_box">
+                                <p><strong>.vn</strong></p>                               
+                                <div>
+                                    <p><span>Giá khởi tạo: </span>350.000 VNĐ/năm</p>
+                                    <p><span>Giá duy trì: </span>480.000 VNĐ/năm</p>
+                                </div>
+                                <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                            </div>
+                                                                         		                                                         <div class="bgtmien_box">
+                                <p><strong>.com.vn .net.vn .biz.vn</strong></p>                               
+                                <div>
+                                    <p><span>Giá khởi tạo: </span>350.000 VNĐ/năm</p>
+                                    <p><span>Giá duy trì: </span>350.000 VNĐ/năm</p>
+                                </div>
+                                <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                            </div>
+                                                                         		                                                         <div class="bgtmien_box">
+                                <p><strong>.name.vn</strong></p>                               
+                                <div>
+                                    <p><span>Giá khởi tạo: </span>30.000 VNĐ/năm</p>
+                                    <p><span>Giá duy trì: </span>30.000 VNĐ/năm</p>
+                                </div>
+                                <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                            </div>
+                                                                         		                                                                          		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                                                                          		                                                                          		                                                         <div class="bgtmien_box">
+                                <p><strong>.int.vn ac.vn .info.vn .pro.vn .gov.vn .org.vn .edu.vn .health.vn </strong></p>
+                            <p><strong>Tên miền theo địa giới hành chính</strong></p>                               
+                                <div>
+                                    <p><span>Giá khởi tạo: </span>200.000 VNĐ/năm</p>
+                                    <p><span>Giá duy trì: </span>200.000 VNĐ/năm</p>
+                                </div>
+                                <a href="/RegisterNew/Domain"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_register2.png" /></a>
+                            </div>
+                                                                         		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                                                                          		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                     		                                         </div>
+                </div>
+            </div>
+            <!--End Hotline-->  
+        </div>         	
+        <!--End Centent--> 
+    </div>
+ 
+<!--End Page-->
+ <div  id="modal" style="display: none">
+<span class="button b-close close" id="closewhois">
+<span>X</span>
+</span>
+    <div class="who_is">
+	<h2>Thông tin <span>Thông báo</span></h2>
+        <div class="text" id="textwhois">
+        	
+        </div>
+</div>
+</div> 
+
+</body>
+</html>
+

@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>MÁY CHỦ ẢO VPS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<link href="http://mobile.tenten.vn/Content/css/smartphone/homestyle.css" rel="stylesheet" type="text/css" />
+<link href="http://mobile.tenten.vn/Content/css/smartphone/whois.css" rel="stylesheet" type="text/css" />
+<link href="http://mobile.tenten.vn/Content/css/smartphone/result_search.css" rel="stylesheet" type="text/css" />	
+<script type="text/javascript" src="http://mobile.tenten.vn/Scripts/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://mobile.tenten.vn/Scripts/smartphone/jquery.reveal.js"></script>
+<link href="http://mobile.tenten.vn/Content/css/alert.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://mobile.tenten.vn/Scripts/jquery.alerts.js"></script>
+<script>
+  var flg_menu=0;
+function checkLength(value) {
+	return value.length >= 3 && value.length <= 63 ? true : false;
+}
+  function chdomain(d){
+              if(d.length<1){
+                    return "Tên miền không được để trống";
+                }
+               var str=/^[0-9|a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ.-]+$/;
+                if(d.match(str)){
+                }else{
+                 return "Tên miền không hợp lệ hoặc chứa kí tự đặc biệt.";
+                }
+                if(!checkLength(d)){
+                    return "Tên miền phải có tối thiểu 3 kí tự và không được lớn hơn 63 kí tự";
+                }
+                return "";
+  }  
+</script>
+<script>
+$(document).ready(function(){
+  $( "#kiemtra" ).click(function() {
+   var domain=$('#domainNameSingleInput').val();
+   var mes=chdomain(domain);
+            if(mes!=""){
+             $('#modal').show();
+             $("#textwhois").html(mes);
+             $('#modal').reveal({ // The item which will be opened with reveal
+                                                animation: 'fade',                   // fade, fadeAndPop, none
+                                                animationspeed: 600,                       // how fast animtions are
+                                                closeonbackgroundclick: true,              // if you click background will modal close?
+                                                dismissmodalclass: 'close'    // the class of a button or element that will close an open modal
+                                        });
+          }else{
+    $( "#submit-form1" ).submit();
+     }
+   });
+  $( "#closewhois" ).click(function() {
+     $("#textwhois").html('');
+     $('#modal').hide();
+   });
+   $( ".menumorong" ).click(function() {
+   if(flg_menu==0){
+   $("#menumorong").html('<img style="margin-left: -1px;margin-top: -11px;" src="http://mobile.tenten.vn/Content/image/smartphone/menumorong_hover.png">');
+   $( "#bd_sm" ).animate({
+             'margin-left':'250px',opacity:'1'
+         },"slow");
+         
+     $( "#menumr" ).animate({
+             left:'0px',opacity:'1'
+         },"slow");
+    
+       flg_menu=1;
+
+   }else{
+   
+   
+    $( "#bd_sm" ).animate({
+            'margin-left':'0',opacity:'1'
+         },"slow");
+         
+     $( "#menumr" ).animate({
+             left:'-250px',opacity:'1'
+         },"slow");
+          $("#menumorong").html('<img src="http://mobile.tenten.vn/Content/image/smartphone/menumorong.png">');
+      flg_menu=0;
+
+   }    
+  });
+  });
+</script>
+</head>
+ <body>
+
+ <script type="text/javascript">  
+  var _gaq = _gaq || [];   var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';  
+ _gaq.push(['_require', 'inpage_linkid', pluginUrl]);   _gaq.push(['_setAccount','UA-45617972-1']);  
+ _gaq.push(['_setDomainName', 'tenten.vn']);   _gaq.push(['_setAllowLinker', true]);
+   _gaq.push(['_trackPageview']);    
+(function() {   
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;   
+  ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';  
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);   })(); 
+ </script>
+ <script language="javascript">
+	 $(window).load(function () {
+            // run code
+			
+			
+			setTimeout(function(){ 
+				$(".loading-page").fadeOut();
+				
+			},700);
+            //$(".loading-page").attr("style","z-index:-9999");
+        });
+
+</script>
+<!--Begin Page-->
+<div class="bd" id="bd_sm" style="position: relative;width: 100%;">
+        <!--Begin Centent--> 
+        <div class="bgcontent">
+        	<!--Begin Search-->
+                <script src="http://mobile.tenten.vn/Scripts/displayVpsPlan.js" type="text/javascript"></script>
+<script>
+    var ids=2;
+    function clickShow(id){
+    
+    if(id!=ids){
+       $("#showDetail"+id).show();
+        $("#showDetail"+ids).hide();
+          $("#li"+id).addClass("active");
+          $("#a"+id).addClass("active");
+           $("#li"+ids).removeClass("active");
+           $("#a"+ids).removeClass("active");
+          ids=id;
+    }
+         
+    }
+</script>
+<div class="result_domain">
+            	<h2><span>Máy chủ ảo</span> VPS</h2>
+                <div class="vps">
+                	<p class="title">Đăng ký máy chủ ảo (VPS)</p>
+                	<div class="vps_bd">
+                    	<ul>
+                        	<li onclick="javascript: clickShow(1);" id="li1"><a id="a1">Beginner</a></li>
+                             <li onclick="javascript: clickShow(2);" id="li2"  class="active" ><a id="a2" class="active">Standard</a></li>
+                            <li onclick="javascript: clickShow(3);" id="li3"><a id="a3" >Professional</a></li>
+                            <li onclick="javascript: clickShow(4);" id="li4"><a id="a4" >Enterprise</a></li>
+                        </ul>
+                            
+                            <div class="detail" id="showDetail1" style="display: none">
+                            <form id="vps-product-form" action="http://mobile.tenten.vn/Registration/displayVpsPrice/Vps" method="post">
+                        	<input class="Vps-key" type="hidden" name="productkey" value="" />
+                                <div class="info">
+                                <p><strong><span>370.000</span> VNĐ/tháng</strong></p>
+                                <p><span class="col1">CPU: </span>1 CORE</p>
+                                <p><span class="col1">RAM: </span>512MB</p>
+                                <p><span class="col1">HDD: </span>50GB <i class="red">(RAID 10)</i></p>
+                                <p><span class="col1">Dữ liệu truyền: </span>không giới hạn</p>
+                                <p><span class="col1">Tốc độ truyền tải: </span>100Mbps</p>
+                                <p class="red"><span class="col1">Phí cài đặt: </span>Miễn Phí</p>
+                            </div>
+                            <h3>Các Gói <span>Đăng ký</span></h3>
+                            <div class="radio">
+                            	<span><input name="quantity" type="radio" value="1" />1 Tháng</span> 
+                                <strong>600.000 VNĐ / tháng</strong>
+                            </div>
+                            <div class="radio">
+                            	<div>
+                                    <span><input name="quantity" type="radio" value="3"  />3 Tháng</span> 
+                                    <strong>597.000 VNĐ / tháng</strong>
+                                </div>
+                                <p>Tặng thêm 1 tháng sử dụng</p>
+                            </div>
+                            <div class="radio">
+                            	<div>
+                                    <span><input name="quantity" type="radio" value="6"  />6 Tháng</span> 
+                                    <strong>565.000 VNĐ / tháng</strong>
+                                </div>
+                                <p>Tặng thêm 2 tháng sử dụng</p>
+                            </div>
+                            <div class="radio">
+                            	<div>
+                                    <span><input name="quantity" type="radio" value="12"  />12 Tháng</span> 
+                                    <strong>415.000 VNĐ / tháng</strong>
+                                </div>
+                                <p>Tặng thêm 3 tháng sử dụng</p>
+                            </div>
+                            <div class="radio">
+                            	<div>
+                                    <span><input checked="checked" name="quantity" type="radio" value="24"  />24 Tháng</span> 
+                                    <strong>370.000 VNĐ / tháng</strong>
+                                </div>
+                                <p>Miễn phí Direct Admin</p>
+                            </div>
+                            <a onclick="javascript: submitVpsPlan('vps-product-form', 'Vps', 'A');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                            </form>
+                        </div>
+                        <div class="detail" id="showDetail2">
+                            <form id="vps-product-form8" action="http://mobile.tenten.vn/Registration/displayVpsPrice/Vps" method="post">
+                                <input class="Vps-key" type="hidden" name="productkey" value="" />
+                        	<div class="info">
+                                <p><strong><span>645.000</span> VNĐ/tháng</strong></p>
+                                <p><span class="col1">CPU: </span>2 CORE</p>
+                                <p><span class="col1">RAM: </span>1GB</p>
+                                <p><span class="col1">HDD: </span>120GB <i class="red">(RAID 10)</i></p>
+                                <p><span class="col1">Dữ liệu truyền: </span>không giới hạn</p>
+                                <p><span class="col1">Tốc độ truyền tải: </span>100Mbps</p>
+                                <p class="red"><span class="col1">Phí cài đặt: </span>Miễn Phí</p>
+                            </div>
+                            <h3>Các Gói <span>Đăng ký</span></h3>
+                            <div class="radio">
+                            	<span><input name="quantity" type="radio" value="1" />1 Tháng</span> 
+                                <strong>1.000.000 VNĐ / tháng</strong>
+                            </div>
+                            <div class="radio">
+                            	<div>
+                                    <span><input name="quantity" type="radio" value="3"  />3 Tháng</span> 
+                                    <strong>945.000 VNĐ / tháng</strong>
+                                </div>
+                                <p>Tặng thêm 1 tháng sử dụng</p>
+                            </div>
+                            <div class="radio">
+                            	<div>
+                                    <span><input name="quantity" type="radio" value="6"  />6 Tháng</span> 
+                                    <strong>845.000 VNĐ / tháng</strong>
+                                </div>
+                                <p>Tặng thêm 2 tháng sử dụng</p>
+                            </div>
+                            <div class="radio">
+                            	<div>
+                                    <span><input name="quantity" type="radio" value="12"  />12 Tháng</span> 
+                                    <strong>745.000 VNĐ / tháng</strong>
+                                </div>
+                                <p>Tặng thêm 3 tháng sử dụng</p>
+                            </div>
+                            <div class="radio">
+                            	<div>
+                                    <span><input checked="checked" name="quantity" type="radio" value="24"  />24 Tháng</span> 
+                                    <strong>645.000 VNĐ / tháng</strong>
+                                </div>
+                                <p>Miễn phí Direct Admin</p>
+                            </div>
+                            <a onclick="javascript: submitVpsPlan2('vps-product-form8', 'Vps', 'B');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                            </form>
+                        </div>
+                        <div class="detail" id="showDetail3" style="display: none">
+                            <form id="vps-product-form3" action="http://mobile.tenten.vn/Registration/displayVpsPrice/Vps" method="post">
+                                <input class="Vps-key" type="hidden" name="productkey" value="" />
+                        	<div class="info">
+                                <p><strong><span>850.000</span> VNĐ/tháng</strong></p>
+                                <p><span class="col1">CPU: </span>3 CORE</p>
+                                <p><span class="col1">RAM: </span>2GB</p>
+                                <p><span class="col1">HDD: </span>160GB <i class="red">(RAID 10)</i></p>
+                                <p><span class="col1">Dữ liệu truyền: </span>không giới hạn</p>
+                                <p><span class="col1">Tốc độ truyền tải: </span>100Mbps</p>
+                                <p class="red"><span class="col1">Phí cài đặt: </span>Miễn Phí</p>
+                            </div>
+                            <h3>Các Gói <span>Đăng ký</span></h3>
+                            <div class="radio">
+                            	<span><input name="quantity" type="radio" value="1" />1 Tháng</span> 
+                                <strong>1.200.000 VNĐ / tháng</strong>
+                            </div>
+                            <div class="radio">
+                            	<div>
+                                    <span><input name="quantity" type="radio" value="3"  />3 Tháng</span> 
+                                    <strong>1.100.000 VNĐ / tháng</strong>
+                                </div>
+                                <p>Tặng thêm 1 tháng sử dụng</p>
+                            </div>
+                            <div class="radio">
+                            	<div>
+                                    <span><input name="quantity" type="radio" value="6"  />6 Tháng</span> 
+                                    <strong>1.045.000 VNĐ / tháng</strong>
+                                </div>
+                                <p>Tặng thêm 2 tháng sử dụng</p>
+                            </div>
+                            <div class="radio">
+                            	<div>
+                                    <span><input name="quantity" type="radio" value="12"  />12 Tháng</span> 
+                                    <strong>945.000 VNĐ / tháng</strong>
+                                </div>
+                                <p>Tặng thêm 3 tháng sử dụng</p>
+                            </div>
+                            <div class="radio">
+                            	<div>
+                                    <span><input checked="checked" name="quantity" type="radio" value="24"  />24 Tháng</span> 
+                                    <strong>850.000 VNĐ / tháng</strong>
+                                </div>
+                                <p>Miễn phí Direct Admin</p>
+                            </div>
+                            <a onclick="javascript: submitVpsPlan3('vps-product-form3', 'Vps', 'C');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                            </form>
+                        </div>
+                        <div class="detail" id="showDetail4" style="display: none">
+                            <form id="vps-product-form4" action="http://mobile.tenten.vn/Registration/displayVpsPrice/Vps" method="post">
+                        	<input class="Vps-key" type="hidden" name="productkey" value="" />
+                                <div class="info">
+                                <p><strong><span>1.300.000</span> VNĐ/tháng</strong></p>
+                                <p><span class="col1">CPU: </span>4 CORE</p>
+                                <p><span class="col1">RAM: </span>4GB</p>
+                                <p><span class="col1">HDD: </span>250GB <i class="red">(RAID 10)</i></p>
+                                <p><span class="col1">Dữ liệu truyền: </span>không giới hạn</p>
+                                <p><span class="col1">Tốc độ truyền tải: </span>100Mbps</p>
+                                <p class="red"><span class="col1">Phí cài đặt: </span>Miễn Phí</p>
+                            </div>
+                            <h3>Các Gói <span>Đăng ký</span></h3>
+                            <div class="radio">
+                            	<span><input name="quantity" type="radio" value="1" />1 Tháng</span> 
+                                <strong>1.800.000 VNĐ / tháng</strong>
+                            </div>
+                            <div class="radio">
+                            	<div>
+                                    <span><input name="quantity" type="radio" value="3"  />3 Tháng</span> 
+                                    <strong>1.650.000 VNĐ / tháng</strong>
+                                </div>
+                                <p>Tặng thêm 1 tháng sử dụng</p>
+                            </div>
+                            <div class="radio">
+                            	<div>
+                                    <span><input name="quantity" type="radio" value="6"  />6 Tháng</span> 
+                                    <strong>1.570.000 VNĐ / tháng</strong>
+                                </div>
+                                <p>Tặng thêm 2 tháng sử dụng</p>
+                            </div>
+                            <div class="radio">
+                            	<div>
+                                    <span><input name="quantity" type="radio" value="12"  />12 Tháng</span> 
+                                    <strong>1.485.000 VNĐ / tháng</strong>
+                                </div>
+                                <p>Tặng thêm 3 tháng sử dụng</p>
+                            </div>
+                            <div class="radio">
+                            	<div>
+                                    <span><input checked="checked" name="quantity" type="radio" value="24"  />24 Tháng</span> 
+                                    <strong>1.300.000 VNĐ / tháng</strong>
+                                </div>
+                                <p>Miễn phí Direct Admin</p>
+                            </div>
+                            <a onclick="javascript: submitVpsPlan4('vps-product-form4', 'Vps', 'D');"><img src="http://mobile.tenten.vn/Content/image/smartphone/bt_orderbuy.png" /></a>
+                            </form>
+                        </div>
+                            
+                            
+                    </div>
+                    <div class="dvbs">
+                    	<table cellpadding="0" cellspacing="0"> 
+                        	<tbody> 
+                            	<tr class="r1"> 
+                                	<td>Dịch vụ bổ sung TENTEN VPS</td>
+                                    <td>GIÁ</td> 
+                                </tr> 
+                                <tr class="r2"> 
+                                	<td>Cài đặt lại hệ điều hành(OS Reload)</td>
+                                    <td>Miễn phí</td> 
+                                </tr> 
+                                <tr class="r2"> 
+                                	<td>Quản trị máy chủ thường</td>
+                                    <td>Miễn phí</td> 
+                                </tr> 
+                                <tr class="r2"> 
+                                	<td>Quản trị máy chủ cấp cao</td>
+                                    <td>990.000 VND/ năm</td> 
+                                </tr>
+                                <tr class="r2"> 
+                                	<td>Bản quyền Direct Admin</td>
+                                    <td>
+                                    	<p>300.000 VND/ tháng</p>
+                                        <p>1.900.000 VND/ năm</p>
+                                        <p>2.000.000 VND/ Lifetime</p>
+                                    </td> 
+                                </tr> 
+                                <tr class="r2"> 
+                                	<td>Bản quyền Cpanel VPS</td>
+                                    <td>
+                                    	<p>360.000 VND/ tháng</p>
+                                        <p>3.700.000 VND/ năm</p>
+                                    </td> 
+                                </tr>
+                                <tr class="r2"> 
+                                	<td>Chuyển dữ liệu khi nâng cấp gói VPS</td>
+                                    <td>500.000 đ/lần</td> 
+                                </tr> 
+                                <tr class="r2"> 
+                                	<td>FTP solutions</td>
+                                    <td>
+                                    	<p>15 GB FTP backup: 85.000 VND/tháng</p>
+                                        <p>30 GB FTP backup: 170.000 VND/tháng</p>
+                                        <p>60 GB FTP backup: 340.000 VND/ tháng</p>
+                                        <p>120 GB FTP backup: 680.000VND/ tháng</p>
+                                    </td> 
+                                </tr>
+                                <tr class="r2"> 
+                                	<td>Control Panel</td>
+                                    <td>cPanel & WHM Unlimited: 400.000VND/tháng</td> 
+                                </tr> 
+                            </tbody>
+                        </table> 
+                        <p class="vat">Phí trên chưa bao gồm VAT (10%)</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--End Hotline-->  
+        </div>         	
+        <!--End Centent--> 
+    </div>
+ 
+<!--End Page-->
+ <div  id="modal" style="display: none">
+<span class="button b-close close" id="closewhois">
+<span>X</span>
+</span>
+    <div class="who_is">
+	<h2>Thông tin <span>Thông báo</span></h2>
+        <div class="text" id="textwhois">
+        	
+        </div>
+</div>
+</div> 
+
+</body>
+</html>
+

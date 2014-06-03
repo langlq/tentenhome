@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TENTEN</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<link href="http://mobile.tenten.vn/Content/css/smartphone/homestyle.css" rel="stylesheet" type="text/css" />
+<link href="http://mobile.tenten.vn/Content/css/smartphone/whois.css" rel="stylesheet" type="text/css" />
+<link href="http://mobile.tenten.vn/Content/css/smartphone/result_search.css" rel="stylesheet" type="text/css" />	
+<script type="text/javascript" src="http://mobile.tenten.vn/Scripts/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://mobile.tenten.vn/Scripts/smartphone/jquery.reveal.js"></script>
+<link href="http://mobile.tenten.vn/Content/css/alert.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://mobile.tenten.vn/Scripts/jquery.alerts.js"></script>
+<script>
+  var flg_menu=0;
+function checkLength(value) {
+	return value.length >= 3 && value.length <= 63 ? true : false;
+}
+  function chdomain(d){
+              if(d.length<1){
+                    return "Tên miền không được để trống";
+                }
+               var str=/^[0-9|a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ.-]+$/;
+                if(d.match(str)){
+                }else{
+                 return "Tên miền không hợp lệ hoặc chứa kí tự đặc biệt.";
+                }
+                if(!checkLength(d)){
+                    return "Tên miền phải có tối thiểu 3 kí tự và không được lớn hơn 63 kí tự";
+                }
+                return "";
+  }  
+</script>
+<script>
+$(document).ready(function(){
+  $( "#kiemtra" ).click(function() {
+   var domain=$('#domainNameSingleInput').val();
+   var mes=chdomain(domain);
+            if(mes!=""){
+             $('#modal').show();
+             $("#textwhois").html(mes);
+             $('#modal').reveal({ // The item which will be opened with reveal
+                                                animation: 'fade',                   // fade, fadeAndPop, none
+                                                animationspeed: 600,                       // how fast animtions are
+                                                closeonbackgroundclick: true,              // if you click background will modal close?
+                                                dismissmodalclass: 'close'    // the class of a button or element that will close an open modal
+                                        });
+          }else{
+    $( "#submit-form1" ).submit();
+     }
+   });
+  $( "#closewhois" ).click(function() {
+     $("#textwhois").html('');
+     $('#modal').hide();
+   });
+   $( ".menumorong" ).click(function() {
+   if(flg_menu==0){
+   $("#menumorong").html('<img style="margin-left: -1px;margin-top: -11px;" src="http://mobile.tenten.vn/Content/image/smartphone/menumorong_hover.png">');
+   $( "#bd_sm" ).animate({
+             'margin-left':'250px',opacity:'1'
+         },"slow");
+         
+     $( "#menumr" ).animate({
+             left:'0px',opacity:'1'
+         },"slow");
+    
+       flg_menu=1;
+
+   }else{
+   
+   
+    $( "#bd_sm" ).animate({
+            'margin-left':'0',opacity:'1'
+         },"slow");
+         
+     $( "#menumr" ).animate({
+             left:'-250px',opacity:'1'
+         },"slow");
+          $("#menumorong").html('<img src="http://mobile.tenten.vn/Content/image/smartphone/menumorong.png">');
+      flg_menu=0;
+
+   }    
+  });
+  });
+</script>
+</head>
+ <body>
+
+ <script type="text/javascript">  
+  var _gaq = _gaq || [];   var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';  
+ _gaq.push(['_require', 'inpage_linkid', pluginUrl]);   _gaq.push(['_setAccount','UA-45617972-1']);  
+ _gaq.push(['_setDomainName', 'tenten.vn']);   _gaq.push(['_setAllowLinker', true]);
+   _gaq.push(['_trackPageview']);    
+(function() {   
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;   
+  ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';  
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);   })(); 
+ </script>
+ <script language="javascript">
+	 $(window).load(function () {
+            // run code
+			
+			
+			setTimeout(function(){ 
+				$(".loading-page").fadeOut();
+				
+			},700);
+            //$(".loading-page").attr("style","z-index:-9999");
+        });
+
+</script>
+<!--Begin Page-->
+<div class="bd" id="bd_sm" style="position: relative;width: 100%;">
+        <!--Begin Centent--> 
+        <div class="bgcontent">
+        	<!--Begin Search-->
+                <form id="submit-form1" name="submit-form1" action="http://mobile.tenten.vn/Search/searchSingleResult" method="post" name="form1">
+       
+                     <!--Begin Search-->
+             <div class="searchdomain">
+            	<input id="domainNameSingleInput" name="domainNameSingleInput" type="text" class="input_search" placeholder="Chọn tên miền hoàn hảo cho bạn" />
+                <a  id="kiemtra"><span class="btn_search"><span class="kiemtra">KIỂM TRA</span></span></a>
+            </div>
+                <div id="kq_tk"></div>
+            <!--End Search-->
+       		<!--Begin Banner--> 
+            <div class="banner">
+                <a href="/hosting-chat-luong-cao" id="img0" ><img src="http://mobile.tenten.vn/Content/image/smartphone/banner.jpg" width="98%"></a>
+                <a href="#" id="img1" style="display: none"><img src="http://mobile.tenten.vn/Content/image/smartphone/banner2.png" width="98%"></a>
+                <a href="#" id="img2" style="display: none"><img src="http://mobile.tenten.vn/Content/image/smartphone/banner.jpg" width="98%"></a>
+                <a href="#" id="img3" style="display: none"><img src="http://mobile.tenten.vn/Content/image/smartphone/banner2.png" width="98%"></a>
+                
+            </div>
+            <!--End Banner--> 
+            <!--Begin Menu-->   
+            <div class="menu">
+            	<a href="http://mobile.tenten.vn/RegisterNew/Domain"><div class="row"><span class="text_dk">Đăng Ký Tên miền</span> <span class="arrowright"><img src="http://mobile.tenten.vn/Content/image/smartphone/arrow.png"></span></div></a>
+             <a href="http://mobile.tenten.vn/PriceList/Domain"><div class="row"><span class="text_dk">Bảng giá tên miền</span> <span class="arrowright"><img src="http://mobile.tenten.vn/Content/image/smartphone/arrow.png"></span></div></a>
+     	<a href="http://mobile.tenten.vn/hosting-chat-luong-cao"><div class="row"><span class="text_dk">Web Hosting</span> <span class="arrowright"><img src="http://mobile.tenten.vn/Content/image/smartphone/arrow.png"></span></div></a>
+                <a href="http://mobile.tenten.vn/vps"><div class="row"><span class="text_dk">Máy chủ ảo VPS</span> <span class="arrowright"><img src="http://mobile.tenten.vn/Content/image/smartphone/arrow.png"></span></div></a>
+                <a href="http://mobile.tenten.vn/lienhe.html"><div class="row"><span class="text_dk">Liên hệ</span> <span class="arrowright"><img src="http://mobile.tenten.vn/Content/image/smartphone/arrow.png"></span></div></a> 
+                 <a href="http://mobile.tenten.vn/RegisterNew/login"><div class="row"><span class="text_dk">Đăng nhập tài khoản</span> <span class="arrowright"><img src="http://mobile.tenten.vn/Content/image/smartphone/arrow.png"></span></div></a>
+            </div>
+            <!--End Menu-->  
+            <!--Begin Hotline-->
+            <div class="hotline">
+            	<div class="fl"><a href="tel:19006416"><img src="http://mobile.tenten.vn/Content/image/smartphone/hotline1.jpg" /></a></div>
+                <div class="fr"><a href="tel:1800 1566"><img src="http://mobile.tenten.vn/Content/image/smartphone/hotline2.jpg" /></a></div>
+            </div>  
+<div  id="modal" style="display: none">
+<span class="button b-close close" id="closewhois">
+<span>X</span>
+</span>
+    <div class="who_is">
+	<h2>Thông tin <span>Thông báo</span></h2>
+        <div class="text" id="textwhois">
+        	
+        </div>
+</div>
+</div>        
+            <!--End Hotline-->  
+        </div>         	
+        <!--End Centent--> 
+    </div>
+ 
+<!--End Page-->
+ <div  id="modal" style="display: none">
+<span class="button b-close close" id="closewhois">
+<span>X</span>
+</span>
+    <div class="who_is">
+	<h2>Thông tin <span>Thông báo</span></h2>
+        <div class="text" id="textwhois">
+        	
+        </div>
+</div>
+</div> 
+
+</body>
+</html>
+
